@@ -8,7 +8,7 @@ class TestPostPet:
 
     @allure.title("Test creating a new pet")
     def test_create_pet(self, pet_data):
-        post_pet_page = PostPetPage(pet_data)
+        post_pet_page = PostPetPage(pet_data)mmmm
         response = post_pet_page.send_request()
         assert response.status_code == 200
         assert response.json()["name"] == pet_data["name"]
