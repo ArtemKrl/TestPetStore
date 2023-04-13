@@ -5,6 +5,7 @@ from pages.post_pet_page import PostPetPage
 @allure.feature("Pet API")
 @allure.story("POST Pet")
 class TestPostPet:
+
     @allure.title("Test creating a new pet")
     def test_create_pet(self, pet_data):
         post_pet_page = PostPetPage(pet_data)
