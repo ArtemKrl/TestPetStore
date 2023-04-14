@@ -29,7 +29,7 @@ class TestGetPet:
         pet_id = "invalid_id"
         get_pet_page = GetPetPage(pet_id)
         response = get_pet_page.send_request("GET")
-        assert response.status_code == 404
+        assert response.status_code == 400
 
     # проверка, что запрос на получение животного с пустым ID возвращает ошибку 405.
     @allure.title("Test getting a pet with empty ID")
